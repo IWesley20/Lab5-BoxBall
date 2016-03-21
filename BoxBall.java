@@ -1,4 +1,5 @@
 import java.awt.Color;
+import java.awt.geom.*;
 import java.util.Random;
 
 /**
@@ -10,7 +11,7 @@ import java.util.Random;
 public class BoxBall
 {
     private int diameter;
-    private Canvas canvas;
+    private final Canvas myCanvas;
     private int xPosition;
     private int yPosition;
     private int xVelocity;
@@ -18,14 +19,14 @@ public class BoxBall
     private final Color color;
     private final Random random = new Random();
     
-    public BoxBall(Canvas drawCanvas,int bottom, int top, int left, int right, int xVelocity, int yVelocity) {
-        canvas = drawCanvas;
+    public BoxBall(Canvas myCanvas,int bottom, int top, int left, int right, int xVelocity, int yVelocity) {
+        this.canvas = myCanvas;
         int bottomLine = bottom;
         int topLine = top;
         int leftLine = left;
         int rightLine = right;
-        int xPosition = random.nextInt((canvas.getSize().height));
-        int yPosition = random.nextInt((canvas.getSize().height));
+        int xPosition = random.nextInt((myCanvas.getSize().height));
+        int yPosition = random.nextInt((myCanvas.getSize().height));
         color = new Color(random.nextInt(255), random.nextInt(255), random.nextInt(255));
         diameter = random.nextInt(72) + 8;
         this.xVelocity = xVelocity;
@@ -45,8 +46,29 @@ public class BoxBall
     public void move()
     {
         erase();
+        
         xPosition += xVelocity;
         yPosition += yVelocity;
+        
+        if (xPosition <= bounceBox){
+            xPosition = bounceBox;
+            xVelocity = -xVelocity;
+        }
+        
+        if (xPosition >= myCanvas.getSize().getWidth() - bounceBox - diameter){
+            xPosition = (int) (myCanvas.getSize().getWidth() - bounceBox - diameter);
+            xVelocity = -xVelocity;
+            }
+            
+        if (yPosition <= bounceBox){
+            yPosition = bounceBox;
+            yVelocity = -yVelocity;
+        }
+        
+        if (yPosition >= myCanvas.getSize().getHeight() - bounceBox - diameter){
+            yPosition = (int) (myCanvas.getSize().getHeight() - bounceBox - diameter);
+            yVelocity = -yVelocity;
+        }
         draw();
     }
     /**
