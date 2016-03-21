@@ -1,19 +1,12 @@
-Bouncing Balls - a demonstration of graphical output on a Canvas class.
+------------------------------------------------------------------------
+This is the project README file. Here, you should describe your project.
+Tell the reader (someone who does not know anything about this project)
+all he/she needs to know. The comments should usually include at least:
+------------------------------------------------------------------------
 
-This project is part of the material for the book
-
-   Objects First with Java - A Practical Introduction using BlueJ
-   Fifth edition
-   David J. Barnes and Michael Kölling
-   Pearson Education, 2012
-
-This project is discussed in chapter 5.
-
-This project provides a short graphical demo in the BallDemo class.
-
-This project provides scope for extension. The Canvas class does not
-usually need to be changed. It may be best to treat it as a library
-class (open the editor and switch to "documentation" view).
-
-Other classes can be changed or added. The book contains suggestions 
-for various exercises.
+PROJECT TITLE:
+PURPOSE OF PROJECT:
+VERSION or DATE:
+HOW TO START THIS PROJECT:
+AUTHORS:
+USER INSTRUCTIONS:

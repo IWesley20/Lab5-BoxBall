@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.params=drawCanvas\ bottom\ top\ left\ right\ xVelocity\ yVelocity
+comment0.target=BoxBall(Canvas,\ int,\ int,\ int,\ int,\ int,\ int)
+comment1.params=
+comment1.target=void\ draw()
+comment1.text=\r\n\ Invokes\ the\ draw\ method\ necessary\ for\ the\ simulation\ to\ work.\r\n
+comment2.params=
+comment2.target=void\ move()
+comment2.text=\r\n\ Specifies\ how\ the\ balls\ move\ in\ the\ box.\r\n
+comment3.params=
+comment3.target=void\ erase()
+comment3.text=\r\n\ Invokes\ the\ erase\ method\ to\ clear\ simulated\ balls.\ \r\n
+comment4.params=
+comment4.target=int\ getXPos()
+comment4.text=\r\n\ Returns\ the\ x-position\ of\ the\ balls.\ \r\n\ @return\ xPosition\r\n
+comment5.params=
+comment5.target=int\ getYPos()
+comment5.text=\r\n\ Returns\ the\ y-position\ of\ the\ balls.\r\n\ @return\ yPosition\r\n
+comment6.params=
+comment6.target=int\ getDiameter()
+comment6.text=\r\n\ Returns\ the\ value\ of\ the\ diameter.\r\n\ @return\ diameter\r\n
+numComments=7
