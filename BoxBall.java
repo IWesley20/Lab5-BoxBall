@@ -50,26 +50,27 @@ public class BoxBall
         xPosition += xVelocity;
         yPosition += yVelocity;
         
-        if (xPosition <= bounceBox){
+        
+        if (xPosition <= bounceBox) {   //checks the boundary for the left line.
             xPosition = bounceBox;
             xVelocity = -xVelocity;
         }
         
-        if (xPosition >= myCanvas.getSize().getWidth() - bounceBox - diameter){
+        if (xPosition >= myCanvas.getSize().getWidth() - bounceBox - diameter) {   //checks the boundary for the right line.
             xPosition = (int) (myCanvas.getSize().getWidth() - bounceBox - diameter);
             xVelocity = -xVelocity;
-            }
-            
-        if (yPosition <= bounceBox){
+        }
+          
+        if (yPosition <= bounceBox) {   //checks the boundary for the top line.   
             yPosition = bounceBox;
             yVelocity = -yVelocity;
         }
         
-        if (yPosition >= myCanvas.getSize().getHeight() - bounceBox - diameter){
+        if (yPosition >= myCanvas.getSize().getHeight() - bounceBox - diameter) {
             yPosition = (int) (myCanvas.getSize().getHeight() - bounceBox - diameter);
             yVelocity = -yVelocity;
         }
-        draw();
+        draw();   //refreshes the image onto the canvas.
     }
     /**
      * Invokes the erase method to clear simulated balls. 
